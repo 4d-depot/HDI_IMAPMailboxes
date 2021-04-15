@@ -1,0 +1,425 @@
+﻿{
+	"destination": "detailScreen",
+	"windowSizingX": "fixed",
+	"windowSizingY": "fixed",
+	"rightMargin": 20,
+	"bottomMargin": 20,
+	"menuBar": "Menu Bar #1",
+	"markerHeader": 15,
+	"markerBody": 200,
+	"markerBreak": 220,
+	"markerFooter": 240,
+	"events": [
+		"onLoad",
+		"onTimer",
+		"onPageChange"
+	],
+	"method": "method.4dm",
+	"pageFormat": {
+		"paperName": "A4",
+		"paperWidth": "842pt",
+		"paperHeight": "595pt"
+	},
+	"$4d": {
+		"version": "1",
+		"kind": "form"
+	},
+	"pages": [
+		{
+			"objects": {
+				"Tab Control": {
+					"type": "tab",
+					"top": 22,
+					"left": 23,
+					"width": 1027,
+					"height": 836,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "_TabTitles",
+					"dataSourceTypeHint": "arrayText",
+					"action": "gotoPage",
+					"events": [
+						"onClick"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"information": {
+					"type": "input",
+					"top": 119,
+					"left": 51,
+					"width": 966,
+					"height": 720,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Infos[0].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		},
+		{
+			"objects": {
+				"Texte1": {
+					"type": "text",
+					"top": 252,
+					"left": 49,
+					"width": 138,
+					"height": 15,
+					"text": "Host name or IP address:"
+				},
+				"Variable1": {
+					"type": "input",
+					"top": 252,
+					"left": 801,
+					"width": 101,
+					"height": 16,
+					"dataSource": "Form:C1466.IMAP.port",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Texte2": {
+					"type": "text",
+					"top": 252,
+					"left": 767,
+					"width": 36,
+					"height": 15,
+					"text": "Port:"
+				},
+				"Variable2": {
+					"type": "input",
+					"top": 278,
+					"left": 189,
+					"width": 547,
+					"height": 16,
+					"dataSource": "Form:C1466.IMAP.user",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Texte3": {
+					"type": "text",
+					"top": 278,
+					"left": 49,
+					"width": 138,
+					"height": 15,
+					"text": "User:"
+				},
+				"Password": {
+					"type": "input",
+					"top": 305,
+					"left": 189,
+					"width": 547,
+					"height": 16,
+					"dataSource": "Form:C1466.IMAP.password",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Texte4": {
+					"type": "text",
+					"top": 305,
+					"left": 49,
+					"width": 138,
+					"height": 15,
+					"text": "Password:"
+				},
+				"Texte12": {
+					"type": "text",
+					"top": 279,
+					"left": 767,
+					"width": 36,
+					"height": 15,
+					"text": "TLS:"
+				},
+				"CheckBox2": {
+					"type": "checkbox",
+					"top": 278,
+					"left": 801,
+					"width": 18,
+					"height": 16,
+					"dataSource": "Not:C34(Form:C1466.IMAP.acceptUnsecureConnection)",
+					"method": "ObjectMethods/CheckBox2.4dm",
+					"events": [
+						"onClick"
+					]
+				},
+				"Bouton4": {
+					"type": "button",
+					"top": 304,
+					"left": 767,
+					"width": 256,
+					"height": 20,
+					"text": "Check IMAP configuration",
+					"focusable": false,
+					"method": "ObjectMethods/Bouton4.4dm",
+					"events": [
+						"onClick"
+					],
+					"shortcutAccel": false,
+					"shortcutControl": false,
+					"shortcutShift": false,
+					"shortcutAlt": false,
+					"shortcutKey": "[Return]"
+				},
+				"Texte19": {
+					"type": "text",
+					"top": 215,
+					"left": 49,
+					"width": 221,
+					"height": 25,
+					"stroke": "#808080",
+					"fontFamily": "Segoe UI",
+					"fontSize": 18,
+					"fontWeight": "bold",
+					"text": "IMAP information"
+				},
+				"Variable11": {
+					"type": "input",
+					"top": 251,
+					"left": 189,
+					"width": 547,
+					"height": 16,
+					"dataSource": "Form:C1466.IMAP.host",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"information1": {
+					"type": "input",
+					"top": 57,
+					"left": 49,
+					"width": 966,
+					"height": 112,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Infos[1].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				},
+				"Input2": {
+					"type": "input",
+					"left": 23,
+					"top": 460,
+					"width": 1027,
+					"height": 26,
+					"contextMenu": "none",
+					"fontWeight": "bold",
+					"fontSize": 18,
+					"stroke": "#008000",
+					"dataSource": "Form:C1466.connectResult",
+					"enterable": false,
+					"focusable": false,
+					"borderStyle": "none",
+					"fill": "transparent",
+					"textAlign": "center"
+				}
+			},
+			"entryOrder": [
+				"Variable1",
+				"Variable2",
+				"Password",
+				"CheckBox2",
+				"Bouton4",
+				"Variable11",
+				"information1",
+				"Input2"
+			]
+		},
+		{
+			"objects": {
+				"List Box": {
+					"type": "listbox",
+					"left": 345,
+					"top": 384,
+					"width": 692,
+					"height": 446,
+					"events": [
+						"onSelectionChange",
+						"onBeginDragOver"
+					],
+					"dataSource": "Form:C1466.receiveMails.mails",
+					"selectionMode": "multiple",
+					"listboxType": "collection",
+					"currentItemSource": "Form:C1466.mail",
+					"currentItemPositionSource": "",
+					"dragging": "custom",
+					"selectedItemsSource": "Form:C1466.mails",
+					"columns": [
+						{
+							"header": {
+								"name": "Header4",
+								"text": "Date"
+							},
+							"name": "Column4",
+							"dataSource": "Date:C102(This:C1470.receivedAt)",
+							"footer": {
+								"name": "Footer4"
+							},
+							"width": 78,
+							"enterable": false,
+							"dataSourceTypeHint": "date"
+						},
+						{
+							"header": {
+								"text": "From",
+								"name": "Header1"
+							},
+							"name": "Column1",
+							"footer": {
+								"name": "Footer1"
+							},
+							"width": 194,
+							"dataSource": "Form:C1466.mailDisplay.from(This:C1470)",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header2",
+								"text": "Subject"
+							},
+							"name": "Column2",
+							"width": 592,
+							"footer": {
+								"name": "Footer2"
+							},
+							"dataSource": "This:C1470.subject",
+							"enterable": false
+						},
+						{
+							"header": {
+								"name": "Header3",
+								"text": "Size"
+							},
+							"name": "Column3",
+							"footer": {
+								"name": "Footer3"
+							},
+							"dataSourceTypeHint": "number",
+							"dataSource": "This:C1470.size",
+							"width": 58,
+							"enterable": false
+						}
+					]
+				},
+				"Text": {
+					"type": "text",
+					"text": "Number of displayed emails:",
+					"top": 61,
+					"left": 40,
+					"width": 210,
+					"height": 15
+				},
+				"Input1": {
+					"type": "input",
+					"left": 218,
+					"top": 62,
+					"width": 66,
+					"height": 16,
+					"dataSourceTypeHint": "number",
+					"dataSource": "Form:C1466.numberMails",
+					"contextMenu": "none"
+				},
+				"Download": {
+					"type": "text",
+					"text": "Downloading Emails in progress",
+					"top": 55,
+					"left": 484,
+					"width": 506,
+					"height": 30,
+					"fontFamily": "Arial",
+					"fontSize": 24,
+					"fontWeight": "bold",
+					"stroke": "#dc143c",
+					"visibility": "hidden"
+				},
+				"Trace": {
+					"type": "checkbox",
+					"text": "Trace",
+					"top": 836,
+					"left": 27,
+					"width": 117,
+					"height": 18,
+					"events": [
+						"onClick"
+					],
+					"dataSource": "Form:C1466.trace",
+					"sizingY": "move"
+				},
+				"MailboxList": {
+					"type": "list",
+					"left": 29,
+					"top": 110,
+					"width": 287,
+					"height": 720,
+					"events": [
+						"onClick",
+						"onDrop",
+						"onSelectionChange"
+					],
+					"method": "ObjectMethods/MailboxList.4dm",
+					"dataSource": "ListRef",
+					"dropping": "automatic"
+				},
+				"information2": {
+					"type": "input",
+					"top": 139,
+					"left": 345,
+					"width": 692,
+					"height": 208,
+					"sizingX": "grow",
+					"sizingY": "grow",
+					"dataSource": "Infos[2].Description",
+					"focusable": false,
+					"fill": "transparent",
+					"borderStyle": "none",
+					"enterable": false,
+					"styledText": true,
+					"contextMenu": "none",
+					"dragging": "none",
+					"dropping": "custom",
+					"events": [
+						"onDataChange"
+					]
+				}
+			}
+		}
+	],
+	"geometryStamp": 465,
+	"editor": {
+		"activeView": "View 1",
+		"defaultView": "View 1",
+		"views": {
+			"View 1": {}
+		}
+	}
+}
